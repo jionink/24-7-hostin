@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "0 */6 * * *"   # every 6 hours
+    - cron: "*/10 * * * *"   # every 10 minutes
   workflow_dispatch:
 
 jobs:
@@ -27,5 +27,5 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add keepalive.txt
           git commit -m "🔁 keep alive" || echo "No changes to commit"
-          git push https://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@github.com/BiratPaudel10/Biralomain.git main
+          git push https://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@github.com/BiratPaudel10/Biralomain.git HEAD:main
 
