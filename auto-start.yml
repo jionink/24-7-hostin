@@ -1,9 +1,9 @@
 name: Auto Start VPS on Push
- 
+
 on:
   push:
     branches: [main]
- 
+
 jobs:
   dispatch:
     runs-on: ubuntu-latest
@@ -12,5 +12,5 @@ jobs:
         run: |
           curl -X POST https://api.github.com/repos/BiratPaudel10/Biralomain/dispatches \
             -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Authorization: token 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" \
             -d '{"event_type": "create-vps", "client_payload": {"vps_name": "autovps", "backup": false}}'
